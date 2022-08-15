@@ -1,12 +1,12 @@
 import React from 'react';
-import cl from './Footer.module.css';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import classes from "./Header.module.css";
 
-const Footer = () => {
+const Header = () => {
     return (
-        <footer className={cl.footer}>
-            <div className={cl.up}>
-                <div className={cl.logo}>
+        <header className={classes.header}>
+            <div className={classes.left}>
+                <div className={classes.logo}>
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="1" y="1" width="46" height="46" rx="23" fill="#23262F"/>
                         <g filter="url(#filter0_d_1617_7216)">
@@ -50,26 +50,37 @@ const Footer = () => {
                     </svg>
                     <p><b>NOOMB</b>ADS</p>
                 </div>
-                <div className={cl.menu}>
-                    <Link className={[cl.link, cl.active].join(' ')} to='/'>Главная</Link>
-                    <Link className={cl.link} to='/'>Магазины</Link>
-                    <Link className={cl.link} to='/'>Помощь</Link>
-                    <Link className={cl.link} to='/'>Объявления</Link>
-                    <Link className={cl.link} to='/'>Услуги</Link>
-                    <Link className={cl.link} to='/'>Главная</Link>
-                </div>
-                <div className={cl.brands}>
-                    <div className={cl.image}><img src="./images/footer/republicOfEstoniaEResidency.png" alt=""/></div>
-                    <div className={cl.image}><img src="./images/footer/trustedEResidencyCompany.png" alt=""/></div>
-                    <div className={cl.image}><img src="./images/footer/EU.png" alt=""/></div>
+                <div className={classes.languages}>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_1617_7221)">
+                            <rect width="20" height="20" rx="10" fill="#1A47B8"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M-2.66667 13.3333H25.3333V20H-2.66667V13.3333Z" fill="#F93939"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M-2.66667 0H25.3333V6.66667H-2.66667V0Z" fill="white"/>
+                        </g>
+                        <rect x="0.5" y="0.5" width="19" height="19" rx="9.5" stroke="#23262F" stroke-opacity="0.1"/>
+                        <defs>
+                            <clipPath id="clip0_1617_7221">
+                                <rect width="20" height="20" rx="10" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <select name="lang" id="">
+                        <option value="RU" selected>RU</option>
+                    </select>
                 </div>
             </div>
-            <hr className={cl.line}/>
-            <div className={cl.down}>
-                <p className={cl.copyright}>Copyright © 2022 NOOMBADS LLC. All rights reserved</p>
+            <div className={classes.menu}>
+                <Link className={[classes.link, classes.active].join(' ')} to='/'>Объявления</Link>
+                <Link className={classes.link} to='/'>Магазины</Link>
+                <Link className={classes.link} to='/'>Услуги</Link>
+                <Link className={classes.link} to='/'>Блог</Link>
             </div>
-        </footer>
+            <div className={classes.auth}>
+                <Link className={classes.login} to='/login'>Войти</Link>
+                <Link className={classes.publish} to='/publish'>Выставить объявление</Link>
+            </div>
+        </header>
     );
 };
 
-export default Footer;
+export default Header;
