@@ -76,7 +76,7 @@ const Header = () => {
                 <Link className={classes.link} to='/'>Блог</Link>
             </div>
             <div className={classes.auth}>
-                <Link className={classes.login} to='/login'>Войти</Link>
+                <Link className={classes.login} to='/Login/Email'>Войти</Link>
                 <Link className={classes.publish} to='/publish'>Выставить объявление</Link>
             </div>
         </header>

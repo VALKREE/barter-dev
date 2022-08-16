@@ -59,9 +59,9 @@ const Footer = () => {
                     <Link className={cl.link} to='/'>Главная</Link>
                 </div>
                 <div className={cl.brands}>
-                    <div className={cl.image}><img src="./images/footer/republicOfEstoniaEResidency.png" alt=""/></div>
-                    <div className={cl.image}><img src="./images/footer/trustedEResidencyCompany.png" alt=""/></div>
-                    <div className={cl.image}><img src="./images/footer/EU.png" alt=""/></div>
+                    <div className={cl.image}><img src="../images/footer/republicOfEstoniaEResidency.png" alt=""/></div>
+                    <div className={cl.image}><img src="../images/footer/trustedEResidencyCompany.png" alt=""/></div>
+                    <div className={cl.image}><img src="../images/footer/EU.png" alt=""/></div>
                 </div>
             </div>
             <hr className={cl.line}/>

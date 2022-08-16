@@ -16,7 +16,7 @@ const AdsVips = ({heading, ads}) => {
             </div>
             <div className={classes.down}>
                 {
-                    ads.map((ad) => <AdVip ad={ad}/>)
+                    ads.map((ad) => <AdVip ad={ad} key={ad.ad_id}/>)
                 }
             </div>
             <button className={classes.more}>

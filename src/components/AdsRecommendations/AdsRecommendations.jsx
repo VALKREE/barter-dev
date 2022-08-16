@@ -10,7 +10,7 @@ const AdsRecommendations = ({heading,ads}) => {
             </div>
             <div className={classes.down}>
                 {
-                    ads.map((ad) => <AdsRecommendation ad={ad}/>)
+                    ads.map((ad) => <AdsRecommendation ad={ad} key={ad.ad_id}/>)
                 }
             </div>
             <button className={classes.more}>

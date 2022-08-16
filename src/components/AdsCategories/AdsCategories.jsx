@@ -6,7 +6,7 @@ import AdCategory from "../AdCategory/AdCategory";
 
 const AdsCategories = ({heading, ads}) => {
     return (
-        <div className={classes.categories}>
+        <div className={classes.ads}>
             <div className={classes.up}>
                 <h3 className={classes.heading}>{heading}</h3>
                 <div className={classes.buttons}>
@@ -16,7 +16,7 @@ const AdsCategories = ({heading, ads}) => {
             </div>
             <div className={classes.down}>
                 {
-                    ads.map((ad) => <AdCategory ad={ad}/>)
+                    ads.map((ad) => <AdCategory ad={ad} key={ad.ad_id}/>)
                 }
             </div>
         </div>
